@@ -7,19 +7,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/custom', (req,res) => {
-  res.send('Dhruv is dumb!')
-})
-
 app.get('/login', (req,res) => {
   var username = req.param('id');
   var password = req.param('pw');
   // Yet to connect to a userbase.
-  if (username == "dhruv" && password == "12345") {
-    res.send("successful");
-  } else {
-    res.send(400);
-  }
+  res.send(execSync(`userlogin ${username} ${password}`).toString());
   console.log(username + " " + password);
 })
 

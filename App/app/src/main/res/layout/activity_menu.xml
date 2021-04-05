@@ -2,30 +2,43 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/menutext"
-        android:layout_width="486dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="116dp"
+        android:layout_width="350dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="104dp"
+        android:gravity="center_horizontal"
         android:text="TextView"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/weatherBTN"
-        android:layout_width="354dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="184dp"
         android:text="weather"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menutext" />
+
+    <Button
+        android:id="@+id/userLogOut"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherBTN"
+        app:layout_constraintVertical_bias="0.102" />
 </androidx.constraintlayout.widget.ConstraintLayout>

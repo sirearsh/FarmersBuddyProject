@@ -3,4 +3,5 @@
     <string name="loginMessage"> </string>
     <string name="StartupMessage">Get Started</string>
     <string name="serverDomain">192.168.43.133:8080</string>
+    <string name="weatherAPItoken">ddd2cff3640b64140f9c1fe655800ef1</string>
 </resources>

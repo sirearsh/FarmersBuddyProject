@@ -20,5 +20,6 @@
       } else {
         startActivity(menuIntent);
       }
+      MainActivity.this.finish();
     }
   }
