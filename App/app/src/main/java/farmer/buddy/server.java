@@ -13,22 +13,44 @@ public class server {
     .writeTimeout(5, TimeUnit.SECONDS)
     .readTimeout(5, TimeUnit.SECONDS)
     .build();
-
-  public static String getResponse(String Url){
+  private static boolean wait;
+  private static String res;
+  public static String getResponse(String Url) {
     System.out.println(Url);
-    String res;
-    try {
-      Request request = new Request.Builder()
-        .url(Url)
-        .build();
-      Response response = client.newCall(request).execute();
-      if (!response.isSuccessful()) {
-        res = "Error";
-      } else {
-        res =  response.body().string();
+    wait=true;
+    Thread t = new Thread(new Runnable() {
+      @Override
+      public void run() {
+        try {
+          Request request = new Request.Builder()
+            .url(Url)
+            .build();
+          Response response = client.newCall(request).execute();
+          if (!response.isSuccessful()) {
+            res = "Error";
+          } else {
+            res = response.body().string();
+          }
+        } catch (IOException e) {
+          res = "IOException";
+        }
+        wait=false;
       }
-    } catch(IOException e) {
-      res = "IOException";
+    });
+    t.start();
+    int time=0;
+    while (wait) {
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+      if (time++==10) {
+        if (t.isAlive()) {
+          t.interrupt();
+          res = "interrupt";
+        }
+      }
     }
     System.out.println(res);
     return res;

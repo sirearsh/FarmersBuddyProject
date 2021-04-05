@@ -16,21 +16,9 @@
       loginIntent = new Intent(MainActivity.this, LoginActivity.class);
       menuIntent = new Intent(MainActivity.this, MenuActivity.class);
       if (!user.check()) {
-        new Thread(new Runnable() {
-          @Override
-          public void run() {
-            System.out.println("trying to start loginActivity");
-            startActivity(loginIntent);
-          }
-        }).start();
+        startActivity(loginIntent);
+      } else {
+        startActivity(menuIntent);
       }
-      while(!user.check());
-      new Thread(new Runnable() {
-        @Override
-        public void run() {
-            MainActivity.this.finish();
-          startActivity(menuIntent);
-        }
-      }).start();
     }
   }
