@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Farmers Buddy</string>
     <string name="loginMessage">Please wait while gets some things done.</string>
+    <string name="StartupMessage">Please wait while gets some things done.</string>
+    <string name="serverDomain">192.168.43.133:8080</string>
 </resources>
