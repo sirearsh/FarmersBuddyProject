@@ -11,15 +11,11 @@ app.get('/custom', (req,res) => {
   res.send('Dhruv is dumb!')
 })
 
-app.get('/nari', (req, res) => {
-  res.send('Nari di service ₹100');
-})
-
 app.get('/login', (req,res) => {
   var username = req.param('id');
   var password = req.param('pw');
-
-  if (execSync(`userlogin ${username} ${password}`).toString()) {
+  // Yet to connect to a userbase.
+  if (username == "dhruv" && password == "12345") {
     res.send("successful");
   } else {
     res.send(400);
