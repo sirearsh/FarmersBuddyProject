@@ -55,6 +55,7 @@ public abstract class user {
       userName=jsonObject.getString("userName");
       landArea=jsonObject.getInt("landArea");
     } catch (JSONException e) {
+      status = false;
       e.printStackTrace();
     }
     return status;
