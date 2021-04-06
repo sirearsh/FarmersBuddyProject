@@ -18,7 +18,7 @@ public class MenuActivity extends AppCompatActivity {
       startActivity(new Intent(MenuActivity.this, MainActivity.class));
     }
     TextView menuText = (TextView)findViewById(R.id.menutext);
-    menuText.setText("Welcome to menu");
+    menuText.setText(String.format("Welcome, %s", user.userName));
     Button weather = (Button)findViewById(R.id.weatherBTN);
     Button logout = (Button)findViewById(R.id.userLogOut);
     weather.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
     logout.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        user.status=false;
+        user.logOut();
         MenuActivity.this.finish();
         startActivity(new Intent(MenuActivity.this, MainActivity.class));
       }

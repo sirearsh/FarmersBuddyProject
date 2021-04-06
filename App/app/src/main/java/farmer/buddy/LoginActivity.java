@@ -7,12 +7,14 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class LoginActivity extends AppCompatActivity {
+  private ProgressBar spinner;
   @Override
   public void onCreate(Bundle savedInstanceState) {
     System.out.println("LoginActivity");
@@ -21,11 +23,13 @@ public class LoginActivity extends AppCompatActivity {
     EditText username = (EditText)findViewById(R.id.UsernameField);
     EditText password = (EditText)findViewById(R.id.PasswordField);
     Button login = (Button)findViewById(R.id.LoginBTN);
+    spinner=(ProgressBar)findViewById(R.id.progressBar1);
+    spinner.setVisibility(View.GONE);
     login.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        spinner.setVisibility(View.VISIBLE);
         hideSoftKeyboards(LoginActivity.this, v);
-        setContentView(R.layout.activity_loading);
         user.login(getString(R.string.serverDomain), username.getText().toString(), password.getText().toString());
         if (!user.check()) {
           Toast.makeText(LoginActivity.this, "Login failed. Try again", Toast.LENGTH_SHORT).show();
@@ -33,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
           LoginActivity.this.finish();
           startActivity(new Intent(LoginActivity.this, MenuActivity.class));
         }
-        setContentView(R.layout.activity_login);
+        spinner.setVisibility(View.GONE);
       }
     });
     ((ConstraintLayout)findViewById(R.id.activity_login)).setOnClickListener(new View.OnClickListener() {

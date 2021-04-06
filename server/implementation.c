@@ -4,6 +4,7 @@
 const char *dataFile = "userBase.bin";
 
 typedef struct User {
+    char userName[50];
     char username[50];
     char password[50];
     char cityName[50];
@@ -30,8 +31,9 @@ void getObjectAt(int idx, User *obj) {
     fread(obj, sizeof(User), 1, file);
 }
 
-void addUser(char *username, char *password, char *cityName, int landArea) {
+void addUser(char *userName, char *username, char *password, char *cityName, int landArea) {
     User obj;
+    strcpy(obj.userName, userName);
     strcpy(obj.username, username);
     strcpy(obj.password, password);
     strcpy(obj.cityName, cityName);
@@ -57,8 +59,9 @@ void printJSON(int id) {
     getObjectAt(id, &obj);
     printf("{\n"
            "\t\"status\":true,\n"
+           "\t\"userName\":\"%s\",\n"
            "\t\"cityName\":\"%s\",\n"
            "\t\"landArea\":%d\n"
            "}\n",
-           obj.cityName, obj.landArea);
+           obj.userName, obj.cityName, obj.landArea);
 }

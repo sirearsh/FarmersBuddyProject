@@ -11,8 +11,9 @@ app.get('/login', (req,res) => {
   var username = req.param('id');
   var password = req.param('pw');
   // Yet to connect to a userbase.
-  res.send(execSync(`userlogin ${username} ${password}`).toString());
-  console.log(username + " " + password);
+  let str = execSync(`userlogin ${username} ${password}`).toString();
+  res.send(str);
+  console.log(username + " " + password+" -> "+str);
 })
 
 app.listen(port, () => {
