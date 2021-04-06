@@ -58,10 +58,11 @@ void printJSON(int id) {
     User obj;
     getObjectAt(id, &obj);
     printf("{\n"
+           "\"id\":%d,\n"
            "\t\"status\":true,\n"
            "\t\"userName\":\"%s\",\n"
            "\t\"cityName\":\"%s\",\n"
            "\t\"landArea\":%d\n"
            "}\n",
-           obj.userName, obj.cityName, obj.landArea);
+           id,obj.userName, obj.cityName, obj.landArea);
 }

@@ -25,12 +25,14 @@ public class LoginActivity extends AppCompatActivity {
     Button login = (Button)findViewById(R.id.LoginBTN);
     spinner=(ProgressBar)findViewById(R.id.progressBar1);
     spinner.setVisibility(View.GONE);
+    Toast.makeText(LoginActivity.this, "securityID = " + user.securityID, Toast.LENGTH_LONG).show();
     login.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         spinner.setVisibility(View.VISIBLE);
         hideSoftKeyboards(LoginActivity.this, v);
-        user.login(getString(R.string.serverDomain), username.getText().toString(), password.getText().toString());
+        user.login(username.getText().toString(), password.getText().toString());
+        user.saveSID(LoginActivity.this);
         if (!user.check()) {
           Toast.makeText(LoginActivity.this, "Login failed. Try again", Toast.LENGTH_SHORT).show();
         } else {

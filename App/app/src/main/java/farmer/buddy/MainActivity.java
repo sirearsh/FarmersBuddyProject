@@ -12,6 +12,7 @@
     protected void onCreate(Bundle savedInstanceState) {
       System.out.println("MainActivity");
       super.onCreate(savedInstanceState);
+      user.init_user(MainActivity.this);
       setContentView(R.layout.activity_main);
       loginIntent = new Intent(MainActivity.this, LoginActivity.class);
       menuIntent = new Intent(MainActivity.this, MenuActivity.class);
