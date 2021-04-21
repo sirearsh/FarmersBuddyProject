@@ -23,8 +23,8 @@ public class WeatherActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_weather);
     if (!user.check()) {
-      WeatherActivity.this.finish();
       startActivity(new Intent(WeatherActivity.this, MainActivity.class));
+      WeatherActivity.this.finish();
     }
     EditText CityName = (EditText)findViewById(R.id.CityName);
     Button checkWeather = (Button)findViewById(R.id.checkWeather);

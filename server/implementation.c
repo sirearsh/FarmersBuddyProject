@@ -21,7 +21,6 @@ int getFileSize() {
     FILE *file = fopen(dataFile, "r");
     fseek(file, 0, SEEK_END);
     int res = (long long)ftell(file) / sizeof(User);
-    fseek(file, 0, SEEK_SET);
     return res;
 }
 

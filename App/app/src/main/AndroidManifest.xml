@@ -21,7 +21,7 @@
         <activity android:name=".LoginActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".MenuActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".WeatherActivity" android:parentActivityName=".MenuActivity"/>
-        <activity android:name=".FileContext"/>
+        <activity android:name=".InfoActivity" android:parentActivityName=".MenuActivity" />
     </application>
 
 </manifest>

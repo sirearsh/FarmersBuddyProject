@@ -30,6 +30,7 @@ public abstract class user {
          status=true;
       }
     } catch (JSONException e) {
+      status = false;
       e.printStackTrace();
     }
   }
@@ -98,4 +99,3 @@ public abstract class user {
    };
   }
 }
-

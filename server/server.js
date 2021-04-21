@@ -1,5 +1,6 @@
 const express = require('express')
 const {execSync} = require('child_process')
+const path = require('path')
 const app = express()
 const port = 8080
 var count = 0
@@ -40,6 +41,12 @@ app.get('/logout', (req,res)=> {
   var securityID=parseInt(req.param('sid'))
   res.send({"query":logout(securityID)});
 
+})
+
+app.get('/info', (req,res) => {
+  var file_name=req.param('id')
+  res.header("Content-Type", 'application/json')
+  res.sendFile(path.resolve('info/'+file_name+'.json'))
 })
 
 app.get('/check_user', (req,res)=>{
