@@ -10,6 +10,7 @@
     private Intent menuIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+      
       System.out.println("MainActivity");
       super.onCreate(savedInstanceState);
       user.init_user(MainActivity.this);
