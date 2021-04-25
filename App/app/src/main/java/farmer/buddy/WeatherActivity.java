@@ -46,8 +46,7 @@ public class WeatherActivity extends AppCompatActivity {
         try {
           JSONObject jsonObject = new JSONObject(server.getResponse("https://api.openweathermap.org/data/2.5/weather?q="+CityName.getText().toString()+"&appid="+getString(R.string.weatherAPItoken)));
           DecimalFormat f = new DecimalFormat("##.00");
-          String res = "temperature is "+f.format(Double.parseDouble(jsonObject.getJSONObject("main").getString("temp"))-273.15)+" °C \n";
-          res +=  "but temperature feels like "+f.format(Double.parseDouble(jsonObject.getJSONObject("main").getString("feels_like"))-273.15)+" °C\n";
+          String res = "Todays temperature "+f.format(Double.parseDouble(jsonObject.getJSONObject("main").getString("temp"))-273.15)+" °C \n";
           output.setText(res);
           String maxt ="Max. Temp.\n "+f.format(Double.parseDouble(jsonObject.getJSONObject("main").getString("temp_max"))-273.15)+" °C\n";
           max.setText(maxt);
@@ -58,7 +57,6 @@ public class WeatherActivity extends AppCompatActivity {
           String humidStr ="Humidity \n"+(jsonObject.getJSONObject("main").getString("humidity"))+" % \n";
           humid.setText(humidStr);
           String riseStr =(jsonObject.getJSONObject("sys").getString("sunrise"));
-          //rise.setText(riseStr);
           String setStr =(jsonObject.getJSONObject("sys").getString("sunset"));
           //set.setText(setStr);
 

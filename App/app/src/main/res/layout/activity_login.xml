@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:id="@+id/activity_login">
+    android:id="@+id/activity_login"
+    android:background="@drawable/app_bg">
 
     <EditText
         android:id="@+id/UsernameField"
@@ -38,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordField" />
+        app:layout_constraintTop_toBottomOf="@+id/PasswordField"
+        android:background="@drawable/buttons"/>
 
     <TextView
         android:id="@+id/output"

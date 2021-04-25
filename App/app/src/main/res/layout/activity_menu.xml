@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
 
     <TextView
         android:id="@+id/menutext"
@@ -27,7 +28,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informationBTN" />
+        app:layout_constraintTop_toBottomOf="@+id/informationBTN"
+        android:background="@drawable/buttons"/>
 
     <Button
         android:id="@+id/informationBTN"
@@ -38,7 +40,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menutext" />
+        app:layout_constraintTop_toBottomOf="@+id/menutext"
+        android:background="@drawable/buttons"/>
 
     <Button
         android:id="@+id/userLogOut"
@@ -49,5 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weatherBTN"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.514"
+        android:background="@drawable/buttons"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
