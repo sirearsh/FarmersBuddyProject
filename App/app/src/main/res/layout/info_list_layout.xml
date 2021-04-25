@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:id="@+id/info_list_button"
-        android:text=""/>
+        android:text=""
+        android:background="@drawable/buttons"/>
 
 </LinearLayout>
