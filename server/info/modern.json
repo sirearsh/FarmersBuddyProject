@@ -1,0 +1,10 @@
+{
+    "list": {
+        "pest": ["Pestisides", "pest"],
+        "irrigation": ["Irrigation ways", "irrigation"],
+        "tech": ["Technology", "technology"],
+        "fish": ["Fish Farming", "fish"],
+        "bee": ["Beekeeping", "bee"]
+    },
+    "desc": " "
+}

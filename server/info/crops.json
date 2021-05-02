@@ -1,0 +1,12 @@
+{
+    "list": {
+        "weat": ["weat", "weat"],
+        "rice": ["rice", "rice"],
+        "maize": ["maize", "maize"],
+        "tea": ["tea", "tea"],
+        "cotton": ["cotton", "cotton"],
+        "sugercane": ["Suger Cane", "sugarcane"],
+        "saffron": ["Saffron", "saffron"]
+    },
+    "desc": " "
+}

@@ -1,0 +1,8 @@
+{
+    "list": {
+        "crops": ["Crops Information", "crop"],
+        "fertilizer": ["Fertilizer", "fertilizer"],
+        "modern": ["Modern/ Alternate Ideas", "technology"]
+    },
+    "desc": ""
+}
