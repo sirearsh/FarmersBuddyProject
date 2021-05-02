@@ -2,3 +2,6 @@
 node_modules
 org
 package-lock.json
+npm-debug.log
+.DS_Store
+/*.env

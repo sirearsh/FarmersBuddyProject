@@ -2,7 +2,7 @@ const express = require('express')
 const {execSync} = require('child_process')
 const path = require('path')
 const app = express()
-const port = 8080
+const port = process.env.PORT || 8080
 var count = 0
 const session = Date.now().valueOf();
 
@@ -57,6 +57,14 @@ app.get('/check_user', (req,res)=>{
   } else {
     res.send(JSON.parse(execSync(`getObjectAt ${id}`)))
   }
+})
+
+const es_data = require('./expert_system/data.json')
+
+app.get('/ai', (req, res) => {
+  var cityName = req.param('city')
+  res.send(es_data[cityName] || '{}')
+  console.log(cityName+" : "+(es_data[cityName] || '{}'))
 })
 
 app.listen(port, () => {

@@ -1,6 +1,7 @@
-{
+{   
     "list": {
-        "next":"go to sample next"
+        "next":["sample next", "thermo"],
+        "nexdf":["sdfs", "nature"]
     },
-    "desc":"this is default page"
+    "desc":"sample"
 }
