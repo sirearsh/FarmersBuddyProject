@@ -22,6 +22,7 @@
         <activity android:name=".MenuActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".WeatherActivity" android:parentActivityName=".MenuActivity"/>
         <activity android:name=".InfoActivity" android:parentActivityName=".MenuActivity" />
+        <activity android:name=".PredActivity" android:parentActivityName=".MenuActivity" />
     </application>
 
 </manifest>

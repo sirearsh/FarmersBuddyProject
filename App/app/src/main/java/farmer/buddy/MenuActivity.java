@@ -22,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
     Button weather = (Button)findViewById(R.id.weatherBTN);
     Button logout = (Button)findViewById(R.id.userLogOut);
     Button information = (Button)findViewById(R.id.informationBTN);
+    Button prediction = (Button)findViewById(R.id.prediction);
     weather.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
@@ -32,6 +33,12 @@ public class MenuActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         startActivity((new Intent(MenuActivity.this, InfoActivity.class)).putExtra("reqData","default"));
+      }
+    });
+    prediction.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        startActivity(new Intent(MenuActivity.this, PredActivity.class));
       }
     });
     logout.setOnClickListener(new View.OnClickListener() {

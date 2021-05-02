@@ -2,6 +2,6 @@
     <string name="app_name">Farmers Buddy</string>
     <string name="loginMessage"> </string>
     <string name="StartupMessage">Get Started</string>
-    <string name="serverDomain">192.168.29.11:8080</string>
+    <string name="serverDomain">192.168.42.214:8080</string>
     <string name="weatherAPItoken">ddd2cff3640b64140f9c1fe655800ef1</string>
 </resources>
