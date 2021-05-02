@@ -1,6 +1,8 @@
 {
     "list": {
-        "next":"go to sample next"
+        "crops": ["Crops Information", "crop"],
+        "fertilizer": ["Fertilizer", "fertilizer"],
+        "modern": ["Modern/ Alternate Ideas", "technology"]
     },
-    "desc":"this is default page"
+    "desc": ""
 }
